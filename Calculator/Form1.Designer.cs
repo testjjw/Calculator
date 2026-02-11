@@ -43,7 +43,7 @@
             // 
             // tbInsert2
             // 
-            tbInsert2.Location = new Point(12, 41);
+            tbInsert2.Location = new Point(12, 50);
             tbInsert2.Name = "tbInsert2";
             tbInsert2.Size = new Size(66, 23);
             tbInsert2.TabIndex = 1;
@@ -51,7 +51,7 @@
             // 
             // tbInsert3
             // 
-            tbInsert3.Location = new Point(12, 70);
+            tbInsert3.Location = new Point(12, 90);
             tbInsert3.Name = "tbInsert3";
             tbInsert3.Size = new Size(66, 23);
             tbInsert3.TabIndex = 2;
