@@ -12,7 +12,8 @@ namespace Calculator
         public int add(int a, int b)
         {
             int sum;
-            return a + b;
+            sum = a + b;
+            return sum;
         }
     }
 }
