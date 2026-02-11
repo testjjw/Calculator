@@ -39,6 +39,7 @@
             tbInsert1.Name = "tbInsert1";
             tbInsert1.Size = new Size(66, 23);
             tbInsert1.TabIndex = 0;
+            tbInsert1.Text = "5";
             // 
             // tbInsert2
             // 
@@ -46,10 +47,11 @@
             tbInsert2.Name = "tbInsert2";
             tbInsert2.Size = new Size(66, 23);
             tbInsert2.TabIndex = 1;
+            tbInsert2.Text = "5";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(22, 70);
+            textBox1.Location = new Point(12, 70);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(66, 23);
             textBox1.TabIndex = 2;
