@@ -13,6 +13,14 @@ namespace Calculator
         {
             int sum;
             sum = a + b;
+            if(sum >10)
+            {
+
+            }
+            else 
+            {
+            
+            }
             return sum;
         }
     }
