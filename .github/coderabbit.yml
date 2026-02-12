@@ -1,0 +1,7 @@
+pull_request:
+  summarization: true           # PR 전체 요약 생성
+  walkthrough: true             # 기술적 설명 (코드 흐름 기반)
+  line_by_line: true            # 라인 단위 코드 리뷰
+  smart_comments: true          # PR에 AI가 똑똑한 코멘트 달기
+  auto_labeling: true           # PR에 자동으로 label 추가
+  auto_assign_reviewer: true    # reviewer 자동 지정
