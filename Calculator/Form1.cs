@@ -37,8 +37,6 @@ namespace Calculator
             int result;
             result = a * b;
 
-            double c, d;
-
             return result;
         }
     }
