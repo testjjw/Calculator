@@ -13,13 +13,13 @@ namespace Calculator
         {
             int sum;
             sum = a + b;
-            if(sum >10)
+            if (sum > 10)
             {
 
             }
-            else 
+            else
             {
-            
+
             }
             return sum;
         }
@@ -40,6 +40,13 @@ namespace Calculator
 
             //test
             return result;
+        }
+
+        public int add(int a, int b, int c)
+        {
+            int sum;
+            sum = a + b + c;
+            return sum;
         }
     }
 }
