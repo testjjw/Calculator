@@ -12,7 +12,7 @@ namespace Calculator
 
         public void temp()
         {
-
+            int a = 0;
         }
 
         public int add(int a, int b)
