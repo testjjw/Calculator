@@ -1,3 +1,4 @@
+using System.CodeDom.Compiler;
 using System.Numerics;
 
 namespace Calculator
@@ -7,6 +8,11 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public void temp()
+        {
+
         }
 
         public int add(int a, int b)
