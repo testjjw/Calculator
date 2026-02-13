@@ -20,6 +20,10 @@ namespace Calculator
             {
 
             }
+            else
+            {
+
+            }
             return sum;
         }
 
