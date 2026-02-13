@@ -9,6 +9,21 @@ namespace Calculator
             InitializeComponent();
         }
 
+        public int test(int a, int b)
+        {
+            int sum = 0;
+            int c, d;
+            
+            sum = a+b;
+            
+            if (sum == 0)
+            {
+
+            }
+            return sum;
+        }
+
+
         public int add(int a, int b)
         {
             int sum;
