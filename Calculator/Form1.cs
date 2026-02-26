@@ -13,13 +13,13 @@ namespace Calculator
         {
             int sum;
             sum = a + b;
-            if(sum >10)
+            if (sum > 10)
             {
 
             }
-            else 
+            else
             {
-            
+
             }
             return sum;
         }
@@ -41,5 +41,40 @@ namespace Calculator
             //test
             return result;
         }
+
+        public int add(int a, int b, int c)
+        {
+            int sum;
+            sum = a + b + c;
+            return sum;
+        }
+
+        public void newadd()
+        {
+            try 
+            { 
+                if (!double.TryParse(tbInsert1.Text, out double num1))
+                {
+                    MessageBox.Show("첫 번째 값이 숫자가 아닙니다.", "입력 오류",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!double.TryParse(tbInsert2.Text, out double num2))
+                {
+                    MessageBox.Show("두 번째 값이 숫자가 아닙니다.", "입력 오류",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                double result = num1 + num2;
+
+                //lblResult.Text = $"{num1} + {num2} = {result}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"오류 발생: {ex.Message}");
+            }
+}
     }
 }
