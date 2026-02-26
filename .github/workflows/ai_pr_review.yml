@@ -1,0 +1,57 @@
+name: AI PR Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get PR diff
+        run: |
+          curl -sSL \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3.diff" \
+            "${{ github.event.pull_request.url }}" > pr.diff
+
+      - name: Call OpenAI
+        run: |
+          python << EOF
+          import os, json, urllib.request
+
+          diff = open("pr.diff","r",encoding="utf-8",errors="ignore").read()[:80000]
+
+          payload = {
+              "model": "gpt-4.1-mini",
+              "input": f"Review this GitHub PR diff and provide concise code review comments:\\n{diff}"
+          }
+
+          req = urllib.request.Request(
+              "https://api.openai.com/v1/responses",
+              data=json.dumps(payload).encode(),
+              headers={
+                  "Authorization": f"Bearer {os.environ['OPENAI_API_KEY']}",
+                  "Content-Type": "application/json"
+              }
+          )
+
+          response = json.loads(urllib.request.urlopen(req).read())
+          text = response["output"][0]["content"][0]["text"]
+
+          open("review.txt","w",encoding="utf-8").write(text)
+          EOF
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      - name: Comment on PR
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --body "$(cat review.txt)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
