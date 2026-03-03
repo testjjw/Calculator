@@ -55,14 +55,14 @@ namespace Calculator
             { 
                 if (!double.TryParse(tbInsert1.Text, out double num1))
                 {
-                    MessageBox.Show("Ã¹ ¹øÂ° °ªÀÌ ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù.", "ÀÔ·Â ¿À·ù",
+                    MessageBox.Show("ì²« ë²ˆì§¸ ê°’ì´ ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤.", "ì…ë ¥ ì˜¤ë¥˜",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (!double.TryParse(tbInsert2.Text, out double num2))
                 {
-                    MessageBox.Show("µÎ ¹øÂ° °ªÀÌ ¼ıÀÚ°¡ ¾Æ´Õ´Ï´Ù.", "ÀÔ·Â ¿À·ù",
+                    MessageBox.Show("ë‘ ë²ˆì§¸ ê°’ì´ ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤.", "ì…ë ¥ ì˜¤ë¥˜",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -73,11 +73,16 @@ namespace Calculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"¿À·ù ¹ß»ı: {ex.Message}");
+                MessageBox.Show($"ì˜¤ë¥˜ ë°œìƒ: {ex.Message}");
             }
         }
 
         public void TEST()
+        {
+            //TEST
+        }
+
+        public void TEST22()
         {
             //TEST
         }
