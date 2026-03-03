@@ -132,7 +132,6 @@ jobs:
       # ====== (옵션) Jira에 이슈가 실제 존재하는지 검증 ======
       # 필요 없으면 아래 step 전체 삭제해도 됨
       - name: Validate issue exists in Jira (optional)
-        if: ${{ secrets.JIRA_BASE_URL != '' && secrets.JIRA_EMAIL != '' && secrets.JIRA_API_TOKEN != '' }}
         env:
           JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
           JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
