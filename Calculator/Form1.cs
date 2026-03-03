@@ -81,5 +81,13 @@ namespace Calculator
         {
             //TEST
         }
+
+
+
+        public void Issue_Key_OK()
+        {
+            //이슈키 정상일때
+        }
+
     }
 }
