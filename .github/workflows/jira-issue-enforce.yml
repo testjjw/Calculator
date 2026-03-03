@@ -128,27 +128,3 @@ jobs:
           fi
 
           echo "issue_key=$BR_KEY" >> "$GITHUB_OUTPUT"
-
-      # ====== (옵션) Jira에 이슈가 실제 존재하는지 검증 ======
-      # 필요 없으면 아래 step 전체 삭제해도 됨
-      #- name: Validate issue exists in Jira (optional)
-      #  env:
-      #    JIRA_BASE_URL: ${{ secrets.JIRA_BASE_URL }}
-      #    JIRA_EMAIL: ${{ secrets.JIRA_EMAIL }}
-      #    JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-      #    ISSUE_KEY: ${{ steps.collect.outputs.issue_key }}
-      #  run: |
-      #    set -euo pipefail
-      #    AUTH=$(printf "%s:%s" "$JIRA_EMAIL" "$JIRA_API_TOKEN" | base64 -w 0)
-    
-      #    STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
-      #      -H "Authorization: Basic $AUTH" \
-      #      -H "Accept: application/json" \
-      #      "$JIRA_BASE_URL/rest/api/3/issue/$ISSUE_KEY")
-
-       #   if [ "$STATUS" -ne 200 ]; then
-        #    echo "❌ Jira issue not found or not accessible: $ISSUE_KEY (HTTP $STATUS)"
-         #   exit 1
-          #fi
-
-          #echo "✅ Jira issue exists: $ISSUE_KEY"
