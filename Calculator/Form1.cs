@@ -81,5 +81,9 @@ namespace Calculator
         {
             //TEST
         }
+        public void TEST2()
+        {
+            //TEST
+        }
     }
 }
