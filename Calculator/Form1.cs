@@ -75,6 +75,11 @@ namespace Calculator
             {
                 MessageBox.Show($"오류 발생: {ex.Message}");
             }
-}
+        }
+
+        public void TEST()
+        {
+            //TEST
+        }
     }
 }
