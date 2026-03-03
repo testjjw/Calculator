@@ -81,5 +81,11 @@ namespace Calculator
         {
             //TEST
         }
+
+        public void IssueKeyMistake()
+        {
+            //이슈키 잘못입력
+        }
+
     }
 }
