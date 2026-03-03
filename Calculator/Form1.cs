@@ -81,5 +81,10 @@ namespace Calculator
         {
             //TEST
         }
+
+        public void NoIssueKey()
+        {
+            //TEST
+        }
     }
 }
