@@ -128,3 +128,5 @@ jobs:
           fi
 
           echo "issue_key=$BR_KEY" >> "$GITHUB_OUTPUT"
+
+          
