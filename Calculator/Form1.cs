@@ -81,5 +81,11 @@ namespace Calculator
         {
             //TEST
         }
+
+        public void No_Issue_Key()
+        {
+            //이슈키 없을때
+        }
+
     }
 }
