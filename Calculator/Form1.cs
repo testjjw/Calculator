@@ -81,5 +81,17 @@ namespace Calculator
         {
             //TEST
         }
+
+        public void AlarmTest()
+        {
+            //알람 확인
+            //추가 주석
+            int a=1;
+            bool bAlarm = false;
+            if (a == 1)
+            {
+                bAlarm = true;
+            }
+        }
     }
 }
