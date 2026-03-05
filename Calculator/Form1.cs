@@ -81,5 +81,10 @@ namespace Calculator
         {
             //TEST
         }
+
+        public void AlarmTest()
+        {
+            //알람 확인
+        }
     }
 }
